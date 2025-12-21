@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Link from "next/link";
+
+
 
 const UserRegister = () => {
   const [step, setStep] = useState(1);
@@ -59,6 +62,7 @@ const UserRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     toast.success('✅ Registration completed!');
+    
   };
 
   return (
@@ -164,9 +168,11 @@ const UserRegister = () => {
                   <p><strong>10th:</strong> {formData.tenthMarks}% in {formData.tenthYear} from {formData.tenthSchool}</p>
                   <p><strong>12th:</strong> {formData.twelfthMarks}% in {formData.twelfthYear} from {formData.twelfthSchool}</p>
                 </div>
+                <Link href="/login/userlogin">
                 <button type="submit" className="mt-6 bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
                   Submit
                 </button>
+                </Link>
               </>
             )}
           </form>

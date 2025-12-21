@@ -1,6 +1,6 @@
 
 import React from 'react'
-import AdminLogin from '../../Components/RegisterOption/adminLogin'
+import AdminLogin from '../../../Components/RegisterOption/adminLogin'
 
 const page = () => {
   return (

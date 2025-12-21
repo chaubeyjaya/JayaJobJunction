@@ -1,6 +1,6 @@
 
 import React from 'react'
-import UserRegister from '../../Components/UserRegister/UserRegister'
+import UserRegister from '../../../Components/UserRegister/UserRegister'
 
 const page = () => {
   return (

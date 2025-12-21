@@ -1,6 +1,6 @@
 
 import React from 'react'
-import RegisterOption from '../../Components/RegisterOption/registerOption'
+import RegisterOption from '../../../Components/RegisterOption/registerOption'
 
 
 const page = () => {

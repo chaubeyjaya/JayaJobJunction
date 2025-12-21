@@ -1,14 +1,12 @@
 import React from 'react'
-import CompanyPage from '../../Components/CompanyPage/CompanyPage'
+import Frontend from '../../../../Components/Job/JobApply/Frontend'
+
 const page = () => {
   return (
     <div>
-      <CompanyPage/>
+      <Frontend/>
     </div>
   )
 }
 
 export default page
-
-
-

@@ -1,14 +1,12 @@
 import React from 'react'
-import CompanyPage from '../../Components/CompanyPage/CompanyPage'
+import UserLogin from '../../../Components/UserLogin/UserLogin'
+
 const page = () => {
   return (
     <div>
-      <CompanyPage/>
+      <UserLogin/>
     </div>
   )
 }
 
 export default page
-
-
-

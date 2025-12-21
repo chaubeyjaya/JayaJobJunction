@@ -8,7 +8,7 @@ const RegisterOption = () => {
       title: "Register as User",
       desc: "Find jobs, apply easily, and track applications.",
       icon: <User className="w-12 h-12 text-blue-600" />,
-      link: "/userregister",
+      link: "/register/userregister",
       color: "from-blue-500 to-blue-700",
     },
     {
