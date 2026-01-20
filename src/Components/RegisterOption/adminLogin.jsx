@@ -18,7 +18,7 @@ export default function AdminLogin() {
 
       if (data.token) {
         // Redirect to AdminFrontend with token as query param
-        window.location.href = `http://localhost:3001/welcome?token=${data.token}`;//yaha se port change ho rha hai 
+        window.location.href = `http://localhost:3001`;//yaha se port change ho rha hai 
       } else {
         alert(data.message);
       }
@@ -28,7 +28,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleLogin} className="mt-40">
       <h2>Admin Login</h2>
       <input
         type="email"

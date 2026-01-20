@@ -2,18 +2,18 @@
 import React from "react";
 import Link from "next/link";
 
-const Frontend = () => {
+const Backend = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50 py-12 px-4">
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         
         {/* Header */}
-        <div className="bg-blue-600 px-8 py-10">
+        <div className="bg-green-600 px-8 py-10">
           <h1 className="text-4xl font-bold text-white">
-            Frontend Developer
+            Backend Developer
           </h1>
-          <p className="text-blue-100 mt-2">
-            Build modern, responsive, and user-friendly web interfaces
+          <p className="text-green-100 mt-2">
+            Build scalable, secure, and high-performance server-side systems
           </p>
         </div>
 
@@ -26,11 +26,11 @@ const Frontend = () => {
               Job Overview
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              A Frontend Developer is responsible for designing and implementing
-              user interfaces that deliver seamless and engaging user
-              experiences. You will collaborate with designers and backend
-              developers to transform ideas into fast, scalable, and visually
-              appealing web applications using modern frontend technologies.
+              A Backend Developer is responsible for developing and maintaining
+              the server-side logic, databases, and APIs that power web
+              applications. You will work closely with frontend developers to
+              ensure seamless data flow, security, and scalability using modern
+              backend technologies.
             </p>
           </section>
 
@@ -41,22 +41,22 @@ const Frontend = () => {
             </h2>
             <ul className="grid sm:grid-cols-2 gap-4 text-gray-700">
               <li className="bg-gray-50 p-4 rounded-lg">
-                Build responsive UI using React, HTML, CSS, and JavaScript
+                Design and develop RESTful and scalable APIs
               </li>
               <li className="bg-gray-50 p-4 rounded-lg">
-                Optimize performance for speed and scalability
+                Manage databases like MongoDB, MySQL, or PostgreSQL
               </li>
               <li className="bg-gray-50 p-4 rounded-lg">
-                Ensure cross-browser and device compatibility
+                Implement authentication and authorization systems
               </li>
               <li className="bg-gray-50 p-4 rounded-lg">
-                Integrate APIs with backend services
+                Optimize server performance and scalability
               </li>
               <li className="bg-gray-50 p-4 rounded-lg">
-                Maintain code using Git and version control systems
+                Ensure application security and data protection
               </li>
               <li className="bg-gray-50 p-4 rounded-lg">
-                Debug, test, and improve UI components
+                Debug, test, and maintain backend services
               </li>
             </ul>
           </section>
@@ -68,10 +68,10 @@ const Frontend = () => {
             </h2>
             <ul className="space-y-2 text-gray-700">
               <li>• Bachelor’s degree in Computer Science or related field</li>
-              <li>• 1–3 years experience with frontend technologies</li>
-              <li>• Strong knowledge of React, JavaScript, HTML, CSS</li>
-              <li>• Understanding of REST APIs and responsive design</li>
-              <li>• Familiarity with UI/UX best practices</li>
+              <li>• 1–4 years experience with backend development</li>
+              <li>• Strong knowledge of Node.js, Express, or Django</li>
+              <li>• Experience with databases and REST APIs</li>
+              <li>• Understanding of security best practices</li>
             </ul>
           </section>
 
@@ -82,9 +82,9 @@ const Frontend = () => {
             </h2>
             <div className="grid sm:grid-cols-2 gap-6 text-gray-700">
               <div>
-                <p><strong>Location:</strong> Mumbai, India (Hybrid)</p>
+                <p><strong>Location:</strong> Bangalore, India (Hybrid)</p>
                 <p><strong>Employment Type:</strong> Full-time</p>
-                <p><strong>Experience Level:</strong> Junior to Mid-level</p>
+                <p><strong>Experience Level:</strong> Mid-level</p>
               </div>
               <div>
                 <p>
@@ -93,7 +93,7 @@ const Frontend = () => {
                     October 30, 2025
                   </span>
                 </p>
-                <p><strong>Salary Range:</strong> ₹6 – 10 LPA</p>
+                <p><strong>Salary Range:</strong> ₹8 – 14 LPA</p>
               </div>
             </div>
           </section>
@@ -101,7 +101,7 @@ const Frontend = () => {
           {/* Apply Button */}
           <div className="flex justify-center pt-6">
             <Link href="/job/jobapply/FrontendForm">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-10 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105">
+              <button className="bg-green-600 hover:bg-green-700 text-white text-lg px-10 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105">
                 Apply Now
               </button>
             </Link>
@@ -113,4 +113,4 @@ const Frontend = () => {
   );
 };
 
-export default Frontend;
+export default Backend;

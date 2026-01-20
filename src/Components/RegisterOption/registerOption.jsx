@@ -15,7 +15,7 @@ const RegisterOption = () => {
       title: "Register as Admin",
       desc: "Manage users, companies, and job postings.",
       icon: <Shield className="w-12 h-12 text-green-600" />,
-      link: "/adminregister",
+      link: "/register/adminregister",
       color: "from-green-500 to-green-700",
     },
     {
