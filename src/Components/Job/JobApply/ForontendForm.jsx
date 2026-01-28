@@ -227,6 +227,7 @@ const JobApplyForm = () => {
   };
 
   return (
+  
     <div
   className="min-h-[calc(100vh-80px)] pt-[80px] flex items-center justify-center py-10 bg-center bg-no-repeat relative"
   style={{ backgroundImage: "url('/images/jobapply.png')", backgroundSize: "cover" }}
