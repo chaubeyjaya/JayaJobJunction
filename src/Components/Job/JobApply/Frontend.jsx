@@ -100,9 +100,9 @@ const Frontend = () => {
 
           {/* Apply Button */}
           <div className="flex justify-center pt-6">
-            <Link href="/job/jobapply/FrontendForm">
+            <Link href="/contactus">
               <button className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-10 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105">
-                Apply Now
+                Contact US
               </button>
             </Link>
           </div>

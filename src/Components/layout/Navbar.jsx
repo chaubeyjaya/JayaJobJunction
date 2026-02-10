@@ -179,7 +179,7 @@ const Navbar = () => {
               { name: 'Jobs', link: '/job/jobcategory' },
               { name: 'Company', link: '/companypage' },
               { name: 'About Us', link: '/aboutus/aboutdetail' },
-              { name: 'Contact Us', link: '/contact' },
+              { name: 'Contact Us', link: '/contactus' },
             ].map((item) => (
               <Link
                 key={item.name}

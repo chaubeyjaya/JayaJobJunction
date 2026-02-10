@@ -166,13 +166,199 @@
 
 // export default JobApplyForm;
 
+
+
+//ye niche wala code ekdm shi hai isko dlt nhi krnah hai 10 feb ko ki hu kyuki bs eesme use apply kis company mai kr rha ye nhi show ho rha tha
+// "use client";
+
+// import React, { useState } from "react";
+// import axios from "axios";
+// import toast, { Toaster } from "react-hot-toast";
+
+// const JobApplyForm = () => {
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     message: "",
+//     phone: "",
+//     file: null,
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value, files } = e.target;
+//     setFormData({
+//       ...formData,
+//       [name]: files ? files[0] : value,
+//     });
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     const formDataToSend = new FormData();
+//     formDataToSend.append("name", formData.name);
+//     formDataToSend.append("email", formData.email);
+//     formDataToSend.append("message", formData.message);
+//     formDataToSend.append("phone", formData.phone);
+//     formDataToSend.append("file", formData.file);
+
+//     try {
+//       const res = await axios.post(
+//         "http://localhost:5000/api/jobapply",
+//         formDataToSend,
+//         {
+//           headers: {
+//             "Content-Type": "multipart/form-data",
+//           },
+//         }
+//       );
+
+//       if (res.status === 201) {
+//         toast.success("Application submitted successfully 🚀");
+//         setFormData({
+//           name: "",
+//           email: "",
+//           message: "",
+//           phone: "",
+//           file: null,
+//         });
+//       }
+//     } catch (error) {
+//       console.error("❌ Error submitting form:", error);
+//       toast.error("Something went wrong. Please try again.");
+//     }
+//   };
+
+//   return (
+  
+//     <div
+//   className="min-h-[calc(100vh-80px)] pt-[80px] flex items-center justify-center py-10 bg-center bg-no-repeat relative"
+//   style={{ backgroundImage: "url('/images/jobapply.png')", backgroundSize: "cover" }}
+// >
+//       {/* Toaster */}
+//       <Toaster position="top-right" reverseOrder={false} />
+
+//       {/* Overlay */}
+//       <div className="absolute inset-0 bg-blue-900/40"></div>
+
+//       {/* Form Wrapper */}
+//       <div className="relative z-10 w-full flex justify-center px-4">
+//         <div className="w-full max-w-lg rounded-3xl bg-white/80 backdrop-blur-xl shadow-2xl p-8 border border-white/40">
+//           <h2 className="text-2xl font-semibold text-center mb-6 text-blue-800">
+//             Apply for Job
+//           </h2>
+
+//           <form onSubmit={handleSubmit} className="space-y-5">
+//             {/* Name */}
+//             <div>
+//               <label className="block text-blue-900 font-medium mb-1">
+//                 Name <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 type="text"
+//                 name="name"
+//                 placeholder="Enter your full name"
+//                 value={formData.name}
+//                 onChange={handleChange}
+//                 required
+//                 className="w-full bg-white border border-blue-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+//               />
+//             </div>
+
+//             {/* Email */}
+//             <div>
+//               <label className="block text-blue-900 font-medium mb-1">
+//                 Email <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="Enter your email"
+//                 value={formData.email}
+//                 onChange={handleChange}
+//                 required
+//                 className="w-full bg-white border border-blue-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+//               />
+//             </div>
+
+//             {/* Message */}
+//             <div>
+//               <label className="block text-blue-900 font-medium mb-1">
+//                 Message <span className="text-red-500">*</span>
+//               </label>
+//               <textarea
+//                 name="message"
+//                 placeholder="Your cover letter or message to the employer"
+//                 value={formData.message}
+//                 onChange={handleChange}
+//                 required
+//                 rows="4"
+//                 className="w-full bg-white border border-blue-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+//               ></textarea>
+//             </div>
+
+//             {/* Phone */}
+//             <div>
+//               <label className="block text-blue-900 font-medium mb-1">
+//                 Phone Number <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 type="tel"
+//                 name="phone"
+//                 placeholder="Enter your phone number"
+//                 value={formData.phone}
+//                 onChange={handleChange}
+//                 required
+//                 className="w-full bg-white border border-blue-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+//               />
+//             </div>
+
+//             {/* Upload CV */}
+//             <div>
+//               <label className="block text-blue-900 font-medium mb-1">
+//                 Upload CV <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 type="file"
+//                 name="file"
+//                 accept=".pdf,.doc,.docx"
+//                 onChange={handleChange}
+//                 required
+//                 className="w-full bg-white border border-blue-200 rounded-lg px-3 py-2"
+//               />
+//               <p className="text-blue-700 text-sm mt-1">
+//                 Maximum upload size: <strong>1 GB</strong>
+//                 <br />
+//                 Allowed file types: <strong>.pdf, .doc, .docx</strong>
+//               </p>
+//             </div>
+
+//             {/* Submit */}
+//             <button
+//               type="submit"
+//               className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition duration-300"
+//             >
+//               Send Application
+//             </button>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default JobApplyForm;
+
+
+
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 const JobApplyForm = () => {
+  const [selectedCompany, setSelectedCompany] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -180,6 +366,14 @@ const JobApplyForm = () => {
     phone: "",
     file: null,
   });
+
+  // ✅ Get company info from localStorage when component mounts
+  useEffect(() => {
+    const companyData = localStorage.getItem('selectedCompany');
+    if (companyData) {
+      setSelectedCompany(JSON.parse(companyData));
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -198,6 +392,14 @@ const JobApplyForm = () => {
     formDataToSend.append("message", formData.message);
     formDataToSend.append("phone", formData.phone);
     formDataToSend.append("file", formData.file);
+    
+    // ✅ Add company information to form data
+    if (selectedCompany) {
+      formDataToSend.append("companyId", selectedCompany.companyId);
+      formDataToSend.append("companyName", selectedCompany.companyName);
+      formDataToSend.append("companyAddress", selectedCompany.companyAddress);
+      formDataToSend.append("companyContact", selectedCompany.companyContact);
+    }
 
     try {
       const res = await axios.post(
@@ -219,6 +421,9 @@ const JobApplyForm = () => {
           phone: "",
           file: null,
         });
+        // ✅ Clear company data after successful submission
+        localStorage.removeItem('selectedCompany');
+        setSelectedCompany(null);
       }
     } catch (error) {
       console.error("❌ Error submitting form:", error);
@@ -227,11 +432,10 @@ const JobApplyForm = () => {
   };
 
   return (
-  
     <div
-  className="min-h-[calc(100vh-80px)] pt-[80px] flex items-center justify-center py-10 bg-center bg-no-repeat relative"
-  style={{ backgroundImage: "url('/images/jobapply.png')", backgroundSize: "cover" }}
->
+      className="min-h-[calc(100vh-80px)] pt-[80px] flex items-center justify-center py-10 bg-center bg-no-repeat relative"
+      style={{ backgroundImage: "url('/images/jobapply.png')", backgroundSize: "cover" }}
+    >
       {/* Toaster */}
       <Toaster position="top-right" reverseOrder={false} />
 
@@ -241,9 +445,25 @@ const JobApplyForm = () => {
       {/* Form Wrapper */}
       <div className="relative z-10 w-full flex justify-center px-4">
         <div className="w-full max-w-lg rounded-3xl bg-white/80 backdrop-blur-xl shadow-2xl p-8 border border-white/40">
-          <h2 className="text-2xl font-semibold text-center mb-6 text-blue-800">
+          <h2 className="text-2xl font-semibold text-center mb-2 text-blue-800">
             Apply for Job
           </h2>
+          
+          {/* ✅ Show selected company info */}
+          {selectedCompany && (
+            <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-sm text-gray-600 mb-1">Applying to:</p>
+              <p className="text-lg font-semibold text-blue-800">
+                {selectedCompany.companyName}
+              </p>
+              <p className="text-sm text-gray-500">
+                📍 {selectedCompany.companyAddress}
+              </p>
+              <p className="text-sm text-gray-500">
+                📞 {selectedCompany.companyContact}
+              </p>
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Name */}
@@ -345,3 +565,4 @@ const JobApplyForm = () => {
 };
 
 export default JobApplyForm;
+
